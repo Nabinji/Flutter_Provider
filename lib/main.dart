@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/Calculator/Provider/calculator_provider.dart';
-import 'package:flutter_provider/Calculator/Screen/my_calculator.dart';
 import 'package:provider/provider.dart';
+
+import 'Timer/coundown_timer.dart';
+import 'Timer/provider/time_provider.dart';
 
 
 void main() {
   runApp(const MyApp());
 }
-
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,17 +15,23 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => CalculatorProvider(),
-      child: MaterialApp(
-        theme: ThemeData.dark(),
+      create: (context) =>  TimerProvider(),
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: const MyCalculator(),
+        home: TimerPage(),
       ),
     );
-
-      }
-
   }
+}
+
+
+
+
+
+
+
+
+
 
   // debugShowCheckedModeBanner: false,
           // themeMode: provider.themeState,

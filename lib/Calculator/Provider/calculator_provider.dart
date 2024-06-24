@@ -5,20 +5,22 @@ class CalculatorProvider extends ChangeNotifier {
   String _displayText = '0';
 
   String get displayText => _displayText;
-
   void setValue(String value) {
-    if (_displayText == '0' && value != "=") {
+    if (_displayText == "0" && value != "=") {
       _displayText = value;
     } else {
       switch (value) {
+        // function for AC, it clear the all expression
         case "AC":
-          _displayText = '0';
+          _displayText = "0";
           break;
-        case "x":
-          _displayText += "*"; // Use * for multiplication in the expression
+        // for multiply operation
+        case 'x':
+          _displayText += "*";
           break;
+        // for = operation
         case "=":
-          compute();
+          calculate();
           break;
         default:
           _displayText += value;
@@ -27,7 +29,7 @@ class CalculatorProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void compute() {
+  void calculate() {
     try {
       String expression = _displayText.replaceAll("x", "*");
       num result = expression.interpret();
@@ -35,8 +37,9 @@ class CalculatorProvider extends ChangeNotifier {
           ? result.toInt().toString()
           : result.toString();
     } catch (e) {
-      _displayText = 'Error';
+      _displayText = "Error";
     }
     notifyListeners();
   }
 }
+
