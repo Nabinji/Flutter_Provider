@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_provider/Voting%20App/Provider/voting_provider.dart';
+import 'package:flutter_provider/Voting%20App/Screen/voting_screen.dart';
 import 'package:provider/provider.dart';
-
-import 'Timer/coundown_timer.dart';
-import 'Timer/provider/time_provider.dart';
 
 
 void main() {
@@ -15,10 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) =>  TimerProvider(),
+
+      create: (context) => VotingProvider(),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: TimerPage(),
+        home: VotingScreen(),
       ),
     );
   }
