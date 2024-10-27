@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../Provider/voting_provider.dart';
+
 
 class ResultScreen extends StatelessWidget {
   const ResultScreen({super.key});
@@ -56,18 +58,17 @@ class ResultScreen extends StatelessWidget {
             ),
           ),
           // Display a message if there is a tie among the top candidates.
-          if (isTie)
-            const Padding(
-              padding: EdgeInsets.all(16.0),
+
+          Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Text(
-                'It\'s a tie!',
-                style: TextStyle(
+                isTie ? 'It\'s a tie!' : "Winner",
+                style:  TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.red),
+                    color:isTie ? Colors.red: Colors.green),
                 textAlign: TextAlign.center,
-              ),
-            ),
+              )),
           const Spacer(),
         ],
       ),
