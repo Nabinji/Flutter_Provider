@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/Voting%20App/Provider/voting_provider.dart';
-import 'package:flutter_provider/Voting%20App/Screen/voting_screen.dart';
+import 'package:flutter_provider/Expense%20Tracker/Provider/transaction_provider.dart';
+import 'package:flutter_provider/Expense%20Tracker/View/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -14,10 +14,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => VotingProvider(),
+      create: (context) => TransactionProvider(),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: VotingScreen(),
+        home: HomeScreen(),
       ),
     );
   }
