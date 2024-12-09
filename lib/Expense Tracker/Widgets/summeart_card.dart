@@ -24,7 +24,7 @@ class SummaryCard extends StatelessWidget {
                 Text(
                     'Total Income: \$${transactionProvider.totalIncome.toStringAsFixed(2)}'),
                 Text(
-                    'Total Expense: \$${transactionProvider.totalExpense.toStringAsFixed(2)}'),
+                    'Total Expense: \$${transactionProvider.totalExpenses.toStringAsFixed(2)}'),
               ],
             ),
             const SizedBox(height: 10),

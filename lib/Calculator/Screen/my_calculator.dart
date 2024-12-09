@@ -1,9 +1,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/Calculator/Provider/calculator_provider.dart';
-import 'package:flutter_provider/Calculator/color.dart';
 import 'package:provider/provider.dart';
+
+import '../Provider/calculator_provider.dart';
+import '../color.dart';
 
 class MyCalculator extends StatefulWidget {
   const MyCalculator({super.key});

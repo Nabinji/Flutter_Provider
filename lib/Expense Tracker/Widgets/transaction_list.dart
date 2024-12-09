@@ -10,9 +10,9 @@ class TransactionList extends StatelessWidget {
     final transactionProvider = Provider.of<TransactionProvider>(context);
 
     return ListView.builder(
-      itemCount: transactionProvider.transactions.length,
+      itemCount: transactionProvider.transaction.length,
       itemBuilder: (ctx, index) {
-        final tx = transactionProvider.transactions[index];
+        final tx = transactionProvider.transaction[index];
         return GestureDetector(
           onLongPress: () {
             transactionProvider.removeTransaction(tx.id);

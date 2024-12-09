@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../Widgets/add_transaction_form.dart';
-import '../Widgets/summary_card.dart';
-import '../Widgets/transaction_list.dart';
+import 'package:flutter_provider/Expense%20Tracker/Widgets/add_transaction.dart';
+import 'package:flutter_provider/Expense%20Tracker/Widgets/summeart_card.dart';
+import 'package:flutter_provider/Expense%20Tracker/Widgets/transaction_list.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -9,7 +9,9 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Expense Tracker')),
+      appBar: AppBar(
+        title: const Text("Expense Trackert"),
+      ),
       body: const Column(
         children: [
           SummaryCard(),
@@ -20,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         onPressed: () {
           showModalBottomSheet(
             context: context,
-            builder: (_) => const AddTransactionForm(),
+            builder: (_) => const AddTransaction(),
           );
         },
         child: const Icon(Icons.add),

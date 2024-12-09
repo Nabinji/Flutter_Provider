@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/Voting%20App/Model/model.dart';
+
+import '../Model/model.dart';
 
 class VotingProvider with ChangeNotifier {
   List<Candidate> _candidates = [

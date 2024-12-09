@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/Timer/Provider/time_provider.dart';
 import 'package:provider/provider.dart';
+
+import 'Provider/time_provider.dart';
 
 class TimerPage extends StatelessWidget {
   const TimerPage({super.key});

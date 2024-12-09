@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_provider/Voting%20App/Provider/voting_provider.dart';
-import 'package:flutter_provider/Voting%20App/Screen/result_screen.dart';
 import 'package:provider/provider.dart';
+
+import '../Provider/voting_provider.dart';
+import 'result_screen.dart';
 
 class VotingScreen extends StatelessWidget {
   const VotingScreen({super.key});
