@@ -38,6 +38,7 @@ dependencies:
   provider: ^6.1.2
   function_tree: ^0.9.1
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

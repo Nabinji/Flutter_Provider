@@ -1,8 +1,6 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../Provider/calculator_provider.dart';
 import '../color.dart';
 

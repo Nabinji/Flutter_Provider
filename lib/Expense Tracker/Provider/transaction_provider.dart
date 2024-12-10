@@ -28,7 +28,7 @@ class TransactionProvider with ChangeNotifier {
     notifyListeners();
     // method to remove
   }
-
+  // method to remove
   void removeTransaction(String id) {
     _transactions.removeWhere((tx) => tx.id == id);
     notifyListeners();
